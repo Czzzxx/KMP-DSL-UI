@@ -1,0 +1,30 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# 添加这个 - 忽略 shared 模块的构建文件
+shared/build/
+*/build/
+app/build/
+
+# 忽略 Kotlin 生成的文件
+.kotlin/
+
+# 忽略日志文件
+*.log
+
+# 忽略系统文件
+Thumbs.db
+desktop.ini
