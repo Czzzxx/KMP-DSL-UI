@@ -34,30 +34,16 @@ class ParserTest {
     }
 
     @Test
-    fun testComplexLayoutDeserialization() {
-        val layoutJson = """
+    fun testUnknownNodeFallback() {
+        val unknownJson = """
             {
-                "type": "Column",
-                "styles": { "horizontalAlignment": "Center" },
-                "children": [
-                    {
-                        "type": "Text",
-                        "text": "Title",
-                        "styles": { "fontSize": "20", "fontWeight": "Bold" }
-                    },
-                    {
-                        "type": "Button",
-                        "text": "Action",
-                        "styles": { "marginTop": "10" }
-                    }
-                ]
+                "type": "NewCoolComponent",
+                "props": { "foo": "bar" },
+                "styles": { "backgroundColor": "#00FF00" }
             }
         """.trimIndent()
 
-        val node = json.decodeFromString<UiNode>(layoutJson)
-        assertIs<ColumnNode>(node)
-        assertEquals(2, node.children?.size)
-        assertIs<TextNode>(node.children?.get(0))
-        assertIs<ButtonNode>(node.children?.get(1))
+        val node = json.decodeFromString<UiNode>(unknownJson)
+        assertIs<UnknownNode>(node)
     }
 }

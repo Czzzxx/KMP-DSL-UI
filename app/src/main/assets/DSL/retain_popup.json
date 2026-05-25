@@ -1,0 +1,93 @@
+{
+  "data": {
+    "user": {
+      "free_days": "7",
+      "effect_count": "100+"
+    }
+  },
+  "ui": {
+    "type": "Box",
+    "styles": {
+      "width": "300",
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": "16",
+      "padding": "24",
+      "horizontalAlignment": "Center"
+    },
+    "children": [
+      {
+        "type": "Column",
+        "styles": {
+          "horizontalAlignment": "Center"
+        },
+        "children": [
+          {
+            "type": "Image",
+            "url": "https://p16-va.lemon8cdn.com/tos-alisg-i-93f9u0uv91-sg/8f8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e~tplv-93f9u0uv91-image.webp",
+            "styles": {
+              "width": "120",
+              "height": "120"
+            }
+          },
+          {
+            "type": "Text",
+            "text": "确认放弃 {user.free_days} 天免费试用吗？",
+            "styles": {
+              "fontSize": "18",
+              "fontWeight": "Bold",
+              "textColor": "#1A1A1A",
+              "margin": "16,0,0,0"
+            }
+          },
+          {
+            "type": "Text",
+            "text": "开通即可解锁 {user.effect_count} 专业特效、无水印导出等权益",
+            "styles": {
+              "fontSize": "14",
+              "textColor": "#666666",
+              "margin": "8,0,0,0",
+              "horizontalAlignment": "Center"
+            }
+          },
+          {
+            "type": "Column",
+            "styles": {
+              "width": "fill",
+              "margin": "24,0,0,0"
+            },
+            "children": [
+              {
+                "type": "Button",
+                "text": "继续试用",
+                "actionId": "keep_trial",
+                "styles": {
+                  "width": "fill",
+                  "backgroundColor": "#FF2C55",
+                  "textColor": "#FFFFFF",
+                  "borderRadius": "25",
+                  "padding": "12",
+                  "fontWeight": "Bold",
+                  "fontSize": "16"
+                }
+              },
+              {
+                "type": "Button",
+                "text": "放弃权益",
+                "actionId": "cancel_trial",
+                "styles": {
+                  "width": "fill",
+                  "backgroundColor": "#F5F5F5",
+                  "textColor": "#999999",
+                  "borderRadius": "25",
+                  "padding": "12",
+                  "margin": "8,0,0,0",
+                  "fontSize": "14"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
