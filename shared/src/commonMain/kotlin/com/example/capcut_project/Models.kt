@@ -25,11 +25,13 @@ data class UiStyle(
     val padding: String? = null,
     val margin: String? = null,
     val horizontalAlignment: String? = null,
-    val verticalAlignment: String? = null
+    val verticalAlignment: String? = null,
+    val weight: String? = null,
+    val backgroundImage: String? = null // 👈 新增：背景图片 URL 或本地文件名
 )
 
 /**
- * 自定义多态解析器：实现DSL错误类型或字段拦截
+ * 自定义多态解析器
  */
 @OptIn(kotlinx.serialization.InternalSerializationApi::class, kotlinx.serialization.ExperimentalSerializationApi::class)
 object UiNodeSerializer : KSerializer<UiNode> {
@@ -42,7 +44,6 @@ object UiNodeSerializer : KSerializer<UiNode> {
         val jsonObject = tree.jsonObject
         val type = jsonObject["type"]?.jsonPrimitive?.content ?: "Unknown"
         
-        // 1. 验证组件类型是否存在
         val strategy = when (type) {
             "Box" -> BoxNode.serializer()
             "Text" -> TextNode.serializer()
@@ -52,7 +53,6 @@ object UiNodeSerializer : KSerializer<UiNode> {
             "Column" -> ColumnNode.serializer()
             "Row" -> RowNode.serializer()
             else -> {
-                // 如果不认识，但带有 props，视为自定义业务组件，不直接判死刑
                 return UnknownNode(
                     originalType = type,
                     errorMessage = if (jsonObject["props"] == null) "未知组件类型: '$type'" else null,
@@ -63,10 +63,8 @@ object UiNodeSerializer : KSerializer<UiNode> {
         }
 
         return try {
-            // 2. 尝试解析该组件的内部属性
             input.json.decodeFromJsonElement(strategy, tree)
         } catch (e: Throwable) {
-            // 3. 属性解析失败
             val errorMsg = when (e) {
                 is kotlinx.serialization.MissingFieldException -> "缺少必填字段: ${e.missingFields.joinToString()}"
                 else -> "属性解析失败: ${e.message}"
@@ -104,7 +102,7 @@ object UiNodeSerializer : KSerializer<UiNode> {
 }
 
 /**
- * 基础 UI 节点模型 (IR)
+ * 基础 UI 节点模型
  */
 @Serializable(with = UiNodeSerializer::class)
 sealed class UiNode {
@@ -114,9 +112,6 @@ sealed class UiNode {
     abstract val visible: String?
 }
 
-/**
- * Unknown 组件：携带详细错误信息
- */
 @Serializable
 @SerialName("Unknown")
 data class UnknownNode(
@@ -159,9 +154,6 @@ data class ImageNode(
     override val children: List<UiNode>? = null
 }
 
-/**
- * Button 组件：交互按钮
- */
 @Serializable
 @SerialName("Button")
 data class ButtonNode(
@@ -174,9 +166,6 @@ data class ButtonNode(
     override val children: List<UiNode>? = null
 }
 
-/**
- * IconButton 组件：纯图标按钮（如关闭按钮）
- */
 @Serializable
 @SerialName("IconButton")
 data class IconButtonNode(
