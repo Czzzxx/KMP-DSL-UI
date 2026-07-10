@@ -4,13 +4,17 @@
 
 # 效果图
 
-![image-20260710143137424](C:\Users\Czzzxx\AppData\Roaming\Typora\typora-user-images\image-20260710143137424.png)
+vip新人订阅挽留页面
 
-![image-20260710143217556](C:\Users\Czzzxx\AppData\Roaming\Typora\typora-user-images\image-20260710143217556.png)
+![项目截图](./images/vip新人订阅挽留页面.png)
 
-![image-20260710143224638](C:\Users\Czzzxx\AppData\Roaming\Typora\typora-user-images\image-20260710143224638.png)
+vip非新人订阅挽留页面
 
+![项目截图](./images/vip非新人订阅挽留页面.png)
 
+svip订阅挽留页面
+
+![项目截图](./images/svip订阅挽留页面.png)
 
 # **选择场景**：**剪映订阅挽留**
 
