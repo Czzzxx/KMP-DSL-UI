@@ -1,0 +1,261 @@
+{
+  "data": {
+    "selected_type": "SVIP"
+  },
+  "ui": {
+    "type": "Column",
+    "style": {
+      "width": "match_parent",
+      "height": "match_parent",
+      "backgroundColor": "#0F0F0F",
+      "padding": { "top": 44.0 }
+    },
+    "children": [
+      {
+        "type": "Row",
+        "style": { "width": "match_parent", "padding": { "left": 16.0, "right": 16.0 }, "alignment": "center", "height": "48.0" },
+        "children": [
+          {
+            "type": "Button",
+            "style": {
+              "margin": { "right": 30.0 },
+              "backgroundColor": "Transparent",
+              "padding": { "left": 0, "right": 0, "top": 0, "bottom": 0 }
+            },
+            "props": {
+              "icon": "res://ic_back_button",
+              "iconSize": 24
+            },
+            "action": { "onTap": { "type": "id", "target": "show_retention_popup" } }
+          },
+          { "type": "Row", "style": { "weight": "1.0", "alignment": "center" }, "children": [
+            {
+              "type": "Button",
+              "style": { "backgroundColor": "Transparent", "padding": 0, "margin": { "right": 24.0 } },
+              "props": { "text": "VIP", "textColor": "#666666", "fontWeight": "bold", "fontSize": 17.0 },
+              "action": { "onTap": { "type": "id", "target": "switch_vip" } }
+            },
+            {
+              "type": "Button",
+              "style": { "backgroundColor": "Transparent", "padding": 0, "margin": { "right": 24.0 } },
+              "props": { "text": "SVIP", "textColor": "#FFFFFF", "fontSize": 17.0, "fontWeight": "bold" },
+              "action": { "onTap": { "type": "id", "target": "switch_svip" } }
+            }
+          ]},
+          { "type": "Text", "props": { "text": "ⓘ", "textColor": "#FFFFFF", "fontSize": 20.0 } },
+          {
+            "type": "Button",
+            "style": { "backgroundColor": "#333333", "borderRadius": 12.0, "padding": { "left": 8.0, "right": 8.0, "top": 4.0, "bottom": 4.0 }, "margin": { "left": 8.0 } },
+            "props": { "text": "错误样例", "textColor": "#FFFFFF", "fontSize": 12.0 },
+            "action": { "onTap": { "type": "id", "target": "show_mis_popup" } }
+          }
+        ]
+      },
+
+      {
+        "type": "Row",
+        "style": { "width": "match_parent", "margin": { "top": 24.0 }, "padding": { "left": 12.0, "right": 12.0 } },
+        "props": { "spacing": 8.0 },
+        "children": [
+          {
+            "type": "Box",
+            "style": { "weight": "1.0", "height": "160.0" },
+            "children": [
+              {
+                "type": "Column",
+                "style": {
+                  "width": "match_parent",
+                  "height": "match_parent",
+                  "backgroundColor": "#1A1A1A",
+                  "borderRadius": { "top-left": 12.0, "top-right": 12.0, "bottom-left": 12.0, "bottom-right": 12.0 },
+                  "border": { "width": 1.5, "color": "#00C2FF" },
+                  "padding": { "top": 24.0, "left": 12.0, "right": 12.0, "bottom": 16.0 }
+                },
+                "children": [
+                  { "type": "Text", "props": { "text": "连续包月首月", "textColor": "#FFFFFF", "fontSize": 16.0, "fontWeight": "bold" } },
+                  { "type": "Box", "style": { "weight": "1.0" } },
+                  { "type": "Row", "style": { "alignment": "bottom" }, "children": [
+                    { "type": "Text", "props": { "text": "¥", "textColor": "#FFFFFF", "fontSize": 14.0 }, "style": { "margin": { "bottom": 4.0 } } },
+                    { "type": "Text", "props": { "text": "25.9", "textColor": "#FFFFFF", "fontSize": 34.0, "fontWeight": "bold" } }
+                  ]},
+                  { "type": "Text", "props": { "text": "¥45/月", "textColor": "#666666", "fontSize": 12.0, "textDecoration": "line-through" } }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "Box",
+            "style": { "weight": "1.0", "height": "160.0" },
+            "children": [
+              {
+                "type": "Column",
+                "style": {
+                  "width": "match_parent",
+                  "height": "match_parent",
+                  "backgroundColor": "#1A1A1A",
+                  "borderRadius": { "top-left": 12.0, "top-right": 12.0, "bottom-left": 12.0, "bottom-right": 12.0 },
+                  "padding": { "top": 24.0, "left": 12.0, "right": 12.0, "bottom": 16.0 }
+                },
+                "children": [
+                  { "type": "Text", "props": { "text": "连续包年", "textColor": "#FFFFFF", "fontSize": 16.0, "fontWeight": "bold" } },
+                  { "type": "Text", "props": { "text": "每月仅需 ¥20.66", "textColor": "#888888", "fontSize": 11.0 }, "style": { "margin": { "top": 4.0 } } },
+                  { "type": "Box", "style": { "weight": "1.0" } },
+                  { "type": "Row", "style": { "alignment": "bottom" }, "children": [
+                    { "type": "Text", "props": { "text": "¥", "textColor": "#FFFFFF", "fontSize": 14.0 }, "style": { "margin": { "bottom": 4.0 } } },
+                    { "type": "Text", "props": { "text": "248", "textColor": "#FFFFFF", "fontSize": 34.0, "fontWeight": "bold" } }
+                  ]},
+                  { "type": "Text", "props": { "text": "¥328/年", "textColor": "#666666", "fontSize": 12.0, "textDecoration": "line-through" } }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "Box",
+            "style": { "weight": "1.0", "height": "160.0" },
+            "children": [
+              {
+                "type": "Column",
+                "style": {
+                  "width": "match_parent",
+                  "height": "match_parent",
+                  "backgroundColor": "#1A1A1A",
+                  "borderRadius": { "top-left": 12.0, "top-right": 12.0, "bottom-left": 12.0, "bottom-right": 12.0 },
+                  "padding": { "top": 24.0, "left": 12.0, "right": 12.0, "bottom": 16.0 }
+                },
+                "children": [
+                  { "type": "Text", "props": { "text": "12个月", "textColor": "#FFFFFF", "fontSize": 16.0, "fontWeight": "bold" } },
+                  { "type": "Text", "props": { "text": "每月仅需 ¥22.33", "textColor": "#888888", "fontSize": 11.0 }, "style": { "margin": { "top": 4.0 } } },
+                  { "type": "Box", "style": { "weight": "1.0" } },
+                  { "type": "Row", "style": { "alignment": "bottom" }, "children": [
+                    { "type": "Text", "props": { "text": "¥", "textColor": "#FFFFFF", "fontSize": 14.0 }, "style": { "margin": { "bottom": 4.0 } } },
+                    { "type": "Text", "props": { "text": "268", "textColor": "#FFFFFF", "fontSize": 34.0, "fontWeight": "bold" } }
+                  ]},
+                  { "type": "Text", "props": { "text": "¥328/年", "textColor": "#666666", "fontSize": 12.0, "textDecoration": "line-through" } }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        "type": "Text",
+        "style": { "margin": { "top": 16.0, "left": 16.0 } },
+        "props": { "text": "次月按¥45/月自动续费，可随时取消", "textColor": "#666666", "fontSize": 12.0 }
+      },
+
+      {
+        "type": "Column",
+        "style": {
+          "width": "match_parent",
+          "margin": { "top": 16.0 },
+          "backgroundColor": "#161618",
+          "borderRadius": { "top-left": 16.0, "top-right": 16.0, "bottom-left": 16.0, "bottom-right": 16.0 },
+          "padding": { "top": 20.0, "bottom": 20.0, "left": 16.0, "right": 16.0 }
+        },
+        "children": [
+          {
+            "type": "Row",
+            "style": { "width": "match_parent" },
+            "children": [
+              { "type": "Text", "props": { "text": "会员权益对比", "textColor": "#FFFFFF", "fontSize": 16.0, "fontWeight": "bold" }, "style": { "weight": "1.0" } },
+              { "type": "Text", "props": { "text": "更多详情 >", "textColor": "#666666", "fontSize": 12.0 } }
+            ]
+          },
+          {
+            "type": "Box",
+            "style": { "width": "match_parent" },
+            "children": [
+              {
+                "type": "Column",
+                "style": { "width": "match_parent", "margin": { "top": 24.0, "bottom": 8.0 } },
+                "children": [
+                  {
+                    "type": "Row",
+                    "style": { "width": "350", "alignment": "center", "height": "40.0" },
+                    "children": [
+                      { "type": "Text", "props": { "text": "权益", "textColor": "#888888", "fontSize": 13.0 }, "style": { "weight": "1.0" } },
+                      { "type": "Text", "props": { "text": "普通用户", "textColor": "#888888", "fontSize": 13.0 }, "style": { "weight": "1.2", "alignment": "center" } },
+                      { "type": "Row", "style": { "weight": "1.2", "alignment": "center" }, "children": [
+                        { "type": "Text", "props": { "text": "💎", "textColor": "#FF2C55", "fontSize": 12.0 } },
+                        { "type": "Text", "props": { "text": "VIP", "textColor": "#FFFFFF", "fontSize": 13.0, "fontWeight": "bold" }, "style": { "margin": { "left": 4.0 } } }
+                      ]},
+                      { "type": "Row", "style": { "weight": "1.2", "alignment": "center" }, "children": [
+                        { "type": "Text", "props": { "text": "💎", "textColor": "#00C2FF", "fontSize": 12.0 } },
+                        { "type": "Text", "props": { "text": "SVIP", "textColor": "#FFFFFF", "fontSize": 13.0, "fontWeight": "bold" }, "style": { "margin": { "left": 4.0 } } }
+                      ]}
+                    ]
+                  },
+                  {
+                    "type": "Row",
+                    "style": { "width": "match_parent", "alignment": "center", "height": "56.0" },
+                    "children": [
+                      { "type": "Text", "props": { "text": "会员多端用", "textColor": "#FFFFFF", "fontSize": 13.0 }, "style": { "weight": "1.2" } },
+                      { "type": "Text", "props": { "text": "———", "textColor": "#444444" }, "style": { "weight": "0.9", "alignment": "center" } },
+                      { "type": "Column", "style": { "weight": "1.2", "alignment": "center" }, "children": [
+                        { "type": "Text", "props": { "text": "手机", "textColor": "#FFFFFF", "fontSize": 13.0 }},
+                        { "type": "Text", "props": { "text": "支持使用「剪映」", "textColor": "#666666", "fontSize": 9.0 }, "style": { "margin": {"top": 4.0} } }
+                      ]},
+                      { "type": "Column", "style": { "weight": "1.2", "alignment": "center" }, "children": [
+                        { "type": "Text", "props": { "text": "电脑/手机/Pad", "textColor": "#FFFFFF", "fontSize": 11.0 }, "style": { "alignment": "center" } },
+                        { "type": "Text", "props": { "text": "支持「专业版」", "textColor": "#666666", "fontSize": 9.0 }, "style": { "margin": {"top": 4.0} } }
+                      ]}
+                    ]
+                  },
+                  {
+                    "type": "Row",
+                    "style": { "width": "match_parent", "alignment": "center", "height": "40.0" },
+                    "children": [
+                      { "type": "Text", "props": { "text": "字幕识别", "textColor": "#FFFFFF", "fontSize": 13.0 }, "style": { "weight": "1.05","margin": {"left": 5}} },
+                      { "type": "Text", "props": { "text": "———", "textColor": "#444444" }, "style": { "weight": "1.0", "alignment": "center" } },
+                      { "type": "Text", "props": { "text": "无限用", "textColor": "#FFFFFF", "fontSize": 13.0 }, "style": { "weight": "1.0", "alignment": "center" } },
+                      { "type": "Text", "props": { "text": "无限用", "textColor": "#FFFFFF", "fontSize": 13.0 }, "style": { "weight": "1.0", "alignment": "center" } }
+                    ]
+                  },
+                  {
+                    "type": "Row",
+                    "style": { "width": "match_parent", "alignment": "center", "height": "40.0" },
+                    "children": [
+                      { "type": "Text", "props": { "text": "AI成片", "textColor": "#FFFFFF", "fontSize": 13.0 }, "style": { "weight": "1.05","margin": {"left": 12} } },
+                      { "type": "Text", "props": { "text": "———", "textColor": "#444444" }, "style": { "weight": "1.0", "alignment": "center" } },
+                      { "type": "Text", "props": { "text": "———", "textColor": "#444444" }, "style": { "weight": "1.0", "alignment": "center" } },
+                      { "type": "Text", "props": { "text": "✓", "textColor": "#FFFFFF", "fontSize": 16.0 }, "style": { "weight": "1.0", "alignment": "center","margin": {"left":15} } }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "Row",
+            "style": { "width": "match_parent", "margin": { "top": 8.0 } },
+            "children": [
+              { "type": "Text", "props": { "text": "展开 ∨", "textColor": "#666666", "fontSize": 12.0 } }
+            ]
+          }
+        ]
+      },
+
+      { "type": "Box", "style": { "weight": "1.0" } },
+
+      {
+        "type": "Button",
+        "id": "buy_now",
+        "style": {
+          "width": "match_parent",
+          "height": "80.0",
+          "backgroundColor": "{is_new_user ? '#FF2C55' : '#333333'}",
+          "borderRadius": { "top-left": 27.0, "top-right": 27.0, "bottom-left": 27.0, "bottom-right": 27.0 },
+          "margin": { "left": 16.0, "right": 16.0, "bottom": 40.0 }
+        },
+        "props": {
+          "text": "¥ 25.9 立即开通",
+          "textColor": "#FFFFFF",
+          "fontSize": 18.0,
+          "fontWeight": "bold"
+        },
+        "action": { "onTap": { "type": "id", "target": "pay_svip" } }
+      }
+    ]
+  }
+}

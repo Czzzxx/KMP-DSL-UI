@@ -7,82 +7,99 @@
   },
   "ui": {
     "type": "Box",
-    "styles": {
-      "width": "300",
+    "style": {
+      "width": "300.0",
       "backgroundColor": "#FFFFFF",
-      "borderRadius": "16",
-      "padding": "24",
-      "horizontalAlignment": "Center"
+      "borderRadius": 16.0,
+      "padding": 24.0,
+      "alignment": "center"
     },
     "children": [
       {
         "type": "Column",
-        "styles": {
-          "horizontalAlignment": "Center"
+        "style": {
+          "alignment": "center"
         },
         "children": [
           {
             "type": "Image",
-            "url": "https://p16-va.lemon8cdn.com/tos-alisg-i-93f9u0uv91-sg/8f8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e~tplv-93f9u0uv91-image.webp",
-            "styles": {
-              "width": "120",
-              "height": "120"
+            "style": {
+              "width": "120.0",
+              "height": "120.0"
+            },
+            "props": {
+              "url": "https://111111111"
             }
           },
           {
             "type": "Text111",
-            "text": "确认放弃 7 天免费试用吗？",
-            "styles": {
-              "fontSize": "18",
-              "fontWeight": "Bold",
-              "textColor": "#1A1A1A",
-              "margin": "16,0,0,0"
+            "style": {
+              "margin": { "top": 16.0 }
+            },
+            "props": {
+              "text": "确认放弃 7 天免费试用吗？",
+              "fontSize": 18.0,
+              "fontWeight": "bold",
+              "textColor": "#1A1A1A"
             }
           },
           {
             "type": "Text",
-            "text": "开通即可解锁 100+ 专业特效、无水印导出等权益",
-            "styles": {
-              "fontSize": "14",
-              "textColor": "#666666111",
-              "margin": "8,0,0,0",
-              "horizontalAlignment": "111"
+            "style": {
+              "margin": { "top": 8.0 },
+              "alignment": "center"
+            },
+            "props": {
+              "text": "开通即可解锁 100+ 专业特效、无水印导出等权益",
+              "fontSize": 14.0,
+              "textColor": "#666666111"
             }
           },
           {
             "type": "Column",
-            "styles": {
-              "width": "fill",
-              "margin": "24,0,0,0"
+            "style": {
+              "width": "match_parent",
+              "margin": { "top": 24.0 }
             },
             "children": [
               {
                 "type": "Button",
-                "text": "继续试用",
-                "actionId": "keep_trial",
-                "styles": {
-                  "width": "fill",
-                  "backgroundColor": "#FF2C55",
+                "style": {
+                  "width": "match_parent",
+                  "backgroundColor": "#FF2C551111",
+                  "borderRadius": 25.0,
+                  "padding": 12.0
+                },
+                "props": {
+                  "text": "继续试用",
                   "textColor": "#FFFFFF",
-                  "borderRadius": "25",
-                  "padding": "12",
-                  "fontWeight": "Bold",
-                  "fontSize": "16"
-                }
+                  "fontWeight": "bold1111",
+                  "fontSize": 16.0
+                },
+                "action": { "onTap": { "type": "id", "target": "keep_trial" } }
               },
               {
                 "type": "Button",
-                "text": "放弃权益",
-                "actionId": "cancel_trial",
-                "styles": {
-                  "width": "fill",
+                "style": {
+                  "width": "match_parent",
                   "backgroundColor": "#F5F5F5",
+                  "borderRadius": 25.0,
+                  "padding": 12.0,
+                  "margin": { "top": 8.0 }
+                },
+                "props": {
+                  "text": "放弃权益",
                   "textColor": "#999999",
-                  "borderRadius": "25",
-                  "padding": "12",
-                  "margin": "8,0,0,0",
-                  "fontSize": "14"
-                }
+                  "fontSize": 14.0
+                },
+                "animation": {
+                  "enter": {
+                    "type": "RotateIn",
+                    "duration": 700,
+                    "repeatCount": 10
+                  }
+                },
+                "action": { "onTap": { "type": "id", "target": "keep_trial" } }
               }
             ]
           }

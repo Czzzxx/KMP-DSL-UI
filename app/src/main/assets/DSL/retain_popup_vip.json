@@ -1,85 +1,92 @@
 {
   "data": {
     "user": {
-      "username": "剪映大玩家",
-      "discount": "5",
-      "isVip": false,
-      "effect_count": "365万+"
+      "discount": "19.9",
+      "effect_count": "365万+",
+      "is_new_user": true
     }
   },
   "ui": {
     "type": "Box",
-    "styles": {
-      "width": "340",
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": "28",
-      "padding": "0"
+    "style": {
+      "width": "340.0",
+      "backgroundColor": "#1A1A1A",
+      "borderRadius": 32.0,
+      "alignment": "center",
+      "margin": { "top": 20.0 }
     },
     "children": [
       {
         "type": "Column",
-        "styles": { "width": "fill" },
+        "style": { "width": "match_parent" },
         "children": [
           {
-            "type": "Row",
-            "styles": { "width": "fill", "padding": "16,16,12,16", "horizontalAlignment": "Center", "backgroundColor": "#FAFAFA" },
-            "children": [
-              { "type": "Button", "text": "VIP", "actionId": "switch_vip", "styles": { "backgroundColor": "#FF2C55", "textColor": "#FFFFFF", "borderRadius": "20", "padding": "6,16,6,16", "fontSize": "13", "fontWeight": "Bold" } },
-              { "type": "Button", "text": "SVIP", "actionId": "switch_svip", "styles": { "backgroundColor": "#EEEEEE", "textColor": "#888888", "borderRadius": "20", "padding": "6,16,6,16", "fontSize": "13", "margin": "0,0,0,12" } },
-              { "type": "Button", "text": "SSVIP", "actionId": "switch_ssvip", "styles": { "backgroundColor": "#EEEEEE", "textColor": "#888888", "borderRadius": "20", "padding": "6,16,6,16", "fontSize": "13", "margin": "0,0,0,12" } }
-            ]
-          },
-          {
-            "type": "Box",
-            "styles": {
-              "width": "fill",
-              "backgroundColor": "#FFF0F3",
-
-              "padding": "24",
-              "borderRadius": "0,0,32,32"
+            "type": "Column",
+            "style": {
+              "width": "match_parent",
+              "backgroundGradient": {
+                "direction": "vertical",
+                "colors": ["#2C1A1D", "#1A1A1A"]
+              },
+              "padding": { "top": 24.0, "bottom": 24.0, "left": 24.0, "right": 24.0 },
+              "borderRadius": { "top-left": 32.0, "top-right": 32.0 }
             },
             "children": [
               {
+                "type": "Row",
+                "style": { "alignment": "top", "width": "match_parent" },
+                "props": { "spacing": 6.0 },
+                "children": [
+                  { "type": "Image",
+                    "style": {
+                      "width": "22.0",
+                      "height": "22.0",
+                      "margin": { "bottom": 2.0 }
+                    },
+                    "props": { "url": "res://ic_vip_diamond" }
+                  },
+                  { "type": "Text", "props": { "text": "VIP 尊享", "fontSize": 17.0, "fontWeight": "bold", "textColor": "#FF2C55" } }
+                ]
+              },
+              {
                 "type": "Column",
-                "styles": { "horizontalAlignment": "Center", "width": "fill" },
+                "style": { "alignment": "center", "width": "match_parent", "margin": { "top": 24.0 } },
                 "children": [
                   {
-                    "type": "Row",
-                    "styles": { "verticalAlignment": "Center", "horizontalAlignment": "Start", "width": "fill" },
-                    "children": [
-                      { "type": "Text", "text": "💎", "styles": { "fontSize": "18" } },
-                      { "type": "Text", "text": "VIP 特惠", "styles": { "textColor": "#FF2C55", "fontSize": "15", "fontWeight": "Bold", "margin": "0,0,0,4" } }
-                    ]
-                  },
-                  {
                     "type": "Text",
-                    "text": "确认放弃 {user.discount} 折超值优惠吗？",
-                    "styles": { "fontSize": "22", "fontWeight": "Bold", "textColor": "#1A1A1A", "margin": "16,0,0,0" }
+                    "props": { "text": "确认放弃 VIP 优惠吗？", "fontSize": 24.0, "fontWeight": "bold", "textColor": "#FFFFFF" }
                   },
                   {
                     "type": "Row",
-                    "styles": { "verticalAlignment": "Bottom", "horizontalAlignment": "Center", "margin": "12,0,0,0" },
+                    "style": { "alignment": "bottom", "margin": { "top": 20.0,"left": 30 } },
                     "children": [
                       {
                         "type": "Text",
-                        "text": "{user.discount}",
-                        "styles": { "fontSize": "72", "fontWeight": "Bold", "textColor": "#FF2C55" }
+                        "props": { "text": "{user.is_new_user ? '14.9' : '19.9'}", "fontSize": 88.0, "fontWeight": "bold", "textColor": "#FF2C55" },
+                        "animation": {
+                          "enter": { "type": "numRolling", "duration": 2000, "easing": "easeOut", "props": { "interval": 30.0 } }
+                        }
                       },
                       {
                         "type": "Column",
-                        "styles": { "margin": "0,0,14,4", "horizontalAlignment": "Start" },
+                        "style": { "width":"80.0","margin": { "left": 6.0, "bottom": 16.0 }, "alignment": "start" },
                         "children": [
                           {
                             "type": "Box",
-                            "styles": { "backgroundColor": "#FF2C55", "padding": "2,6,2,6", "borderRadius": "4", "margin": "0,0,4,0" },
+                            "style": {
+                              "backgroundGradient": { "direction": "horizontal", "colors": ["#FF2C55", "#FF5E7E"] },
+                              "padding": { "top": 3.0, "bottom": 3.0, "left": 8.0, "right": 8.0 },
+                              "borderRadius": 8.0,
+                              "margin": { "bottom": 6.0 }
+                            },
+                            "animation": {"enter":{"type":"fadeIn","delay": 3500}},
                             "children": [
-                              { "type": "Text", "text": "限时福利", "styles": { "textColor": "#FFFFFF", "fontSize": "10", "fontWeight": "Bold" } }
+                              { "type": "Text", "props": { "text": "{user.is_new_user ? '新人优惠' : '特惠价格'}", "textColor": "#FFFFFF", "fontSize": 12.0, "fontWeight": "bold" }}
                             ]
                           },
                           {
                             "type": "Text",
-                            "text": "折",
-                            "styles": { "fontSize": "20", "fontWeight": "Bold", "textColor": "#FF2C55" }
+                            "props": { "text": "元", "fontSize": 22.0, "fontWeight": "bold", "textColor": "#FF2C55" }
                           }
                         ]
                       }
@@ -91,49 +98,54 @@
           },
           {
             "type": "Column",
-            "styles": { "padding": "24", "horizontalAlignment": "Center", "width": "fill" },
+            "style": { "padding": { "top": 0.0, "bottom": 24.0, "left": 24.0, "right": 24.0 }, "alignment": "center", "width": "match_parent" },
             "children": [
               {
                 "type": "Text",
-                "text": "{user.effect_count} 会员权益等你来体验",
-                "styles": { "fontSize": "14", "textColor": "#777777", "margin": "0,0,20,0", "fontWeight": "Bold" }
+                "props": { "text": "{user.effect_count} 巅峰权益等你解锁", "fontSize": 14.0, "textColor": "#999999", "fontWeight": "medium" }
               },
               {
                 "type": "Row",
-                "styles": { "width": "fill", "horizontalAlignment": "Center", "margin": "0,0,28,0" },
+                "style": { "width": "match_parent", "alignment": "center", "margin": { "top": 16.0, "bottom": 24.0 } },
+                "props": { "spacing": 12.0 },
                 "children": [
-                  { "type": "BenefitItem", "text": "专属素材", "url": "file:///android_asset/images/专属素材.png" },
-                  { "type": "BenefitItem", "text": "美颜美体", "url": "file:///android_asset/images/美颜美体.png" },
-                  { "type": "BenefitItem", "text": "超清画质", "url": "file:///android_asset/images/高清画质.png" },
-                  { "type": "BenefitItem", "text": "精选模板", "url": "file:///android_asset/images/精选模板.png" }
-                ]
+                  { "type": "BenefitItem", "props": { "label": "海量大片", "icon": "res://benefit_film" } },
+                  { "type": "BenefitItem", "props": { "label": "专属素材", "icon": "res://benefit_special_effort" } },
+                  { "type": "BenefitItem", "props": { "label": "美颜美体", "icon": "res://benefit_beauty" } },
+                  { "type": "BenefitItem", "props": { "label": "超清画质", "icon": "res://benefit_high_quality" } }
+                ],
+                "animation": {
+                  "loop": {
+                    "type": "marquee",
+                    "duration": 3000,
+                    "props": {
+                      "pauseOnTouch": true,
+                      "direction": "left"
+                    }
+                  }
+                }
               },
               {
                 "type": "Button",
-                "text": "我再想想",
-                "actionId": "keep_trial",
-                "styles": {
-                  "width": "fill",
+                "style": {
+                  "width": "match_parent",
                   "backgroundColor": "#FF2C55",
-                  "textColor": "#FFFFFF",
-                  "borderRadius": "14",
-                  "padding": "16",
-                  "fontWeight": "Bold",
-                  "fontSize": "18"
-                }
+                  "borderRadius": 24.0,
+                  "padding": 16.0
+                },
+                "props": { "text": "我再想想", "textColor": "#FFFFFF", "fontWeight": "medium", "fontSize": 18.0 },
+                "action": { "onTap": { "type": "id", "target": "keep_trial" } }
               },
               {
                 "type": "Button",
-                "text": "狠心离开",
-                "actionId": "cancel_trial",
-                "styles": {
-                  "width": "fill",
+                "style": {
+                  "width": "match_parent",
                   "backgroundColor": "Transparent",
-                  "textColor": "#999999",
-                  "padding": "12",
-                  "fontSize": "15",
-                  "margin": "12,0,0,0"
-                }
+                  "padding": 12.0,
+                  "margin": { "top": 8.0 }
+                },
+                "props": { "text": "狠心离开", "textColor": "#666666", "fontSize": 15.0 },
+                "action": { "onTap": { "type": "id", "target": "cancel_trial" } }
               }
             ]
           }

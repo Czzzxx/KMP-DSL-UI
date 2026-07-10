@@ -1,5 +1,6 @@
 package com.example.capcut_project
 
+import com.example.capcut_project.ui.model.*
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
 import kotlin.test.assertEquals
